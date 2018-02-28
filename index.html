@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+      div{
+        width:400px;
+        height:250px;
+        background:colors;
+      }
+    </style>
     <meta charset="UTF-8">
     <title>Banners</title>
     <script
   src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script>
         $(function(){
+          var Heading="I am Hector"
+           console.log(Heading);
             $('p').css('font-family','Times New Roman')
+            
             $('h1').click(function(){
-            })
+              $('div').css('background','"colors"')
+            });
         });
-        
+       
     </script>
   </head>
   <body>
   <h2>Hello Welcome to Banner creation!<br>Please fill out the information below:</h2>
-  <p>Would you like a cross on your banner?</p>
-  <input type="radio" name="Cross" value="No"> No<br>
-<input type="radio" name="Cross" value="Yes"> Yes<br>
-Name:
+  Name:<input type="text" name="name1">
 <br>
-Color of background:
-
-<div>hello</div>
+Color of background:<input type="text" name="colors">
+  <p>Would you like a cross on your banner?<br> <input type="radio" name="Cross" value="No"> No<br>
+<input type="radio" name="Cross" value="Yes"> Yes<br></p>
+ <h1>Show Me</h1>
+<div></div>
   </body>
 </html>
