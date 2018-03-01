@@ -2,10 +2,9 @@
 <html>
   <head>
     <style>
-      div{
+      #thing{
         width:400px;
         height:250px;
-        background:colors;
       }
     </style>
     <meta charset="UTF-8">
@@ -14,25 +13,26 @@
   src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script>
         $(function(){
-          var Heading="I am Hector"
-           console.log(Heading);
-            $('p').css('font-family','Times New Roman')
+          $('button').click(function(){
+            var name = $('#name').val();
+            var color1 = $('#colorUser').val();
+            $('#thing').css('background-color', color1).val(color1);
+            var filler= "I am "+name+color1;
+            $('div').html(filler);
+          });
+            $('p').css('font-family','Times New Roman');
             
-            $('h1').click(function(){
-              $('div').css('background','"colors"')
-            });
+            
+            
         });
        
     </script>
   </head>
   <body>
   <h2>Hello Welcome to Banner creation!<br>Please fill out the information below:</h2>
-  Name:<input type="text" name="name1">
-<br>
-Color of background:<input type="text" name="colors">
-  <p>Would you like a cross on your banner?<br> <input type="radio" name="Cross" value="No"> No<br>
-<input type="radio" name="Cross" value="Yes"> Yes<br></p>
- <h1>Show Me</h1>
-<div></div>
+  Name: <input id="name"><br>
+Background  Color: <input id="colorUser"><br>
+<button>Lets see what you made!</button>
+<div id='thing'>Hello, Please Insert the paremeters above and what you put there shall appear here</div>
   </body>
 </html>
