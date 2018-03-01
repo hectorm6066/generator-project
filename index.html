@@ -15,12 +15,15 @@
         $(function(){
           $('button').click(function(){
             var name = $('#name').val();
+            var preference= $('#preference').val();
             var color1 = $('#colorUser').val();
+            var fontc=$('#fontc').val();
             $('#thing').css('background-color', color1).val(color1);
-            var filler= "I am "+name+color1;
+            $('#thing').css('color', fontc).val(fontc);
+            var filler= "My name is "+name+". My favorite color is "+color1+"."+preference;
             $('div').html(filler);
           });
-            $('p').css('font-family','Times New Roman');
+            $('#thing').css('font-family','Times New Roman');
             
             
             
@@ -32,7 +35,9 @@
   <h2>Hello Welcome to Banner creation!<br>Please fill out the information below:</h2>
   Name: <input id="name"><br>
 Background  Color: <input id="colorUser"><br>
+Font Color: <input id="fontc"><br>
+What would you like to say? <input id="preference"><br>
 <button>Lets see what you made!</button>
-<div id='thing'>Hello, Please Insert the paremeters above and what you put there shall appear here</div>
+<div id='thing'>Hello, Please answer the questions  above and what you put there shall appear here</div>
   </body>
 </html>
